@@ -1,0 +1,359 @@
+:root {
+    --primarycolor: #141e4c;
+    --secondcolor: #101d42;
+    --textcolor: white;
+    --textsecondary: #fbb44c;
+    --primaryfont: 'Poppins', sans-serif;
+    --fontsize: 0.75rem;
+    --backsecondary: #dfedf5;
+    --button: #2bb686;
+    --fontsize: 0.75rem;
+    --fs-large: 1rem;
+    --fs-medium: 0.875rem;
+    --fs-small: 0.75rem;
+    --spacing-xl: 2.625rem;
+    --spacing-large: 1.75rem;
+    --spacing-medium: 1rem;
+    --spacing-small: 0.5rem;
+    --spacing-tiny: 0.25rem;
+    --mobile-logo-height: 45px;
+}
+
+
+body{
+    margin: 0;
+    font-family: var(--primaryfont);
+
+}
+.container{  
+    background-color: var(--primarycolor);
+     display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 0fr 0.65fr 0.6fr 0fr 0.5fr 0fr; 
+    gap: 0rem 1.438rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "header header header"
+    "BineAiVenit BineAiVenit BineAiVenit"
+    "Calendar-cursuri Calendar-cursuri Calendar-cursuri"
+    "About-US About-US About-US"
+    "Parteneri Parteneri Parteneri"
+    "footer footer footer";
+ }
+ 
+ 
+ .header{ 
+    grid-area: header; 
+    background-color: var(--primarycolor);
+    position: sticky;
+    padding: 1rem;
+    top: 0rem;
+    height: fit-content;
+    text-transform: uppercase;
+    font-size: var(--fontsize);
+    justify-content: space-between;
+    
+}
+
+
+.containernav{
+    
+    display: flex;
+    max-width: 66.875rem;
+    min-width: 20.7rem;
+    margin: auto;
+     justify-content: space-between;
+    align-items: center;
+   
+    
+}
+
+
+.containernav img{
+    width: auto;
+    height: 60px;
+}
+ul{
+   
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+
+li{
+    float: left;
+}
+
+  
+li a{
+    display: block;
+    color: var(--textcolor);
+    text-align: center;
+    padding: 0.885rem 1rem;
+    text-decoration: none;
+     text-align: -webkit-match-parent;
+     align-content: center;
+   
+}
+
+.li a:hover{
+    color: var(--textsecondary);
+}
+
+.arrow-down-icon{
+    position: absolute;
+}
+
+span{
+    margin-top: -0.25rem;
+}
+
+
+
+a:-webkit-any-link {
+    color: var(--textsecondary);
+    cursor: pointer;
+    
+}
+
+.submenu{
+    display: none;
+    position: absolute;
+    width: 10rem;
+    background-color: var(--secondcolor);
+    z-index: 3;
+}
+
+.submenu a{
+    padding: 0rem;
+}
+
+
+.about-us:hover .submenu{
+    display: block;
+}
+
+.BineAiVenit { 
+    grid-area: BineAiVenit; 
+    background-color: var(--primarycolor);
+    color: var(--textcolor);
+}
+
+
+h1{ font-size: 3.5rem;
+}
+
+
+.containernav p{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0rem;
+    font-size: 1rem;
+}
+
+.containernav span{
+    color: var(--textsecondary);
+}
+
+.img img{
+   
+    font-weight: bold;
+    height: 1.5rem;
+    width: auto;
+    margin-left: 0.875rem;
+}
+
+.BineAiVenit .containernav{
+    display: flex;
+    flex-direction: column;
+    max-width: 66.875rem;
+    min-width: 19.9rem;
+    align-items: flex-start;
+    margin: auto;
+    margin-top: 0
+}
+
+.BineAiVenit a{
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+    text-decoration: none;
+    font-size: 0.875rem;
+    padding: 1.125rem 5rem;
+    border-radius: 0.313rem;
+    margin-top: 2.125rem;
+    border: 0.125rem solid transparent; 
+    background-color: var(--button); 
+}
+
+.BineAiVenit a:hover{
+    background-color: var(--primarycolor);
+    border: 0.125rem solid var(--button);
+}
+
+.Calendar-cursuri p{
+    font-size: 1.75rem;
+    font-weight: 900;
+    text-align: center;
+    color: var(--secondcolor);
+}
+
+.Calendar-cursuri{ 
+    grid-area: Calendar-cursuri; 
+}
+
+.Curs{
+    border: 0.063rem solid #ddd;
+    width: 21rem;
+    height: max-content;
+    border-radius: 0.313rem;
+    padding: 0rem 0.313rem;
+    color: var(--secondcolor);
+    margin-bottom: 1.25rem;
+}
+
+.Calendar-cursuri p{
+    font-size: 1.75rem;
+    font-weight: 900;
+    text-align: center;
+    color: var(--secondcolor);
+}
+
+.Calendar-cursuri{ 
+    grid-area: Calendar-cursuri; 
+}
+
+
+
+.cursuri{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 3.125rem;
+}
+
+.Simbol{
+    display: flex;
+    align-items: center;
+}
+
+.Simbol span{
+    color: #141e4c;
+}
+
+.bar{
+    margin-top: 0.625rem;
+    height: 0.25rem;
+    background-color: var(--button);
+    border-radius: 0.625rem;
+    margin-bottom: 0.313rem;
+}
+
+.Online{
+    background-color: var(--textsecondary);
+    display: flex;
+    margin-left: 0.625rem;
+    height: 0.80 rem;
+    align-items: center;
+    padding: 0.063rem 0.5rem;
+    border-radius: 5%;
+}
+
+.About-US{ 
+    grid-area: About-US; 
+    background-color: var(--backsecondary);
+    margin-top: 0.625rem;
+}
+
+.About-US p{
+    font-size: 1.75rem;
+    font-weight: 900;
+    text-align: center;
+    color: var(--secondcolor);
+}
+
+.info{
+    text-align: center;
+    color: var(--secondcolor);
+    margin-bottom: 1.25rem;
+}
+
+.ContinutCurs img{
+    height: 14.625rem;
+    padding: 0rem 0rem;
+}
+
+.imagini{
+    border: none;
+}
+
+.Parteneri{ 
+    grid-area: Parteneri; 
+}
+
+.Parteneri p{
+    font-size: 1.75rem;
+    font-weight: 900;
+    text-align: center;
+    color: var(--secondcolor);
+}
+
+.parteners{
+    display: flex;
+    border: none;
+    width: 12.5rem;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.parteners img{ 
+    border: none;
+    height: 6.25rem;
+    padding: 0rem 0rem;
+    filter: url(filters.svg#grayscale);
+    filter: gray;
+    -webkit-filter: grayscale(1);
+  
+}
+
+
+.parteners img:hover{
+    filter: none;
+    -webkit-filter: none;
+}
+
+.footer { 
+    grid-area: footer; 
+    background-color: var(--primarycolor);
+}
+
+
+    .footer p {
+        font-size: var(--fs-small);
+        text-align: center;
+        color: white;
+        padding: var(--spacing-medium) 0;
+    }
+ 
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
+
+
+
+
